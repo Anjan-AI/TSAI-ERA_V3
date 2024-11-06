@@ -1,0 +1,1 @@
+Augmented data is driven from original data with some minor changes. In the case of image augmentation, we make geometric and color space transformations like flipping, resizing, cropping, brightness and contrast to increase the size and diversity of the training set.

@@ -1,0 +1,39 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Selector and File Uploader</title>
+    <link rel="stylesheet" href="/static/styles.css"> <!-- Updated link -->
+</head>
+<body>
+    <h1>ERA3 Session 2 Assignment</h1>
+    <div class="container">
+        <div class="box">
+            <h2>Select an Animal</h2>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" id="cat" name="animal" value="cat"> Cat
+                </label>
+                <label>
+                    <input type="radio" id="dog" name="animal" value="dog"> Dog
+                </label>
+                <label>
+                    <input type="radio" id="elephant" name="animal" value="elephant"> Elephant
+                </label>
+            </div>
+            <div class="image-display">
+                <img id="animalImage" src="" alt="Animal Image" style="display:none;">
+            </div>
+        </div>
+        <div class="box">
+            <h2>Upload a File</h2>
+            <input type="file" id="fileInput">
+            <div id="fileInfo"></div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script> <!-- Updated link to the external script file -->
+</body>
+</html>

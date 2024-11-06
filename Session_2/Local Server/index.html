@@ -1,0 +1,72 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Selector and File Uploader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>FAST API BASED LOCAL SERVER DEMO</h1> <!-- Added heading -->
+    <div class="box">
+        <h2>Select an Animal</h2>
+        <div class="radio-group">
+            <label>
+                <input type="radio" id="cat" name="animal" value="cat"> Cat
+            </label>
+            <label>
+                <input type="radio" id="dog" name="animal" value="dog"> Dog
+            </label>
+            <label>
+                <input type="radio" id="elephant" name="animal" value="elephant"> Elephant
+            </label>
+        </div>
+        <img id="animalImage" src="" alt="" style="display:none;">
+    </div>
+    <div class="box">
+        <h2>Upload a File</h2>
+        <input type="file" id="fileInput">
+        <div id="fileInfo"></div>
+    </div>
+
+    <script>
+        const animalImage = document.getElementById('animalImage');
+        const fileInfo = document.getElementById('fileInfo');
+        const fileInput = document.getElementById('fileInput');
+
+        // Add event listeners to radio buttons
+        document.querySelectorAll('input[name="animal"]').forEach((radio) => {
+            radio.addEventListener('change', () => {
+                // Display the image for the selected animal
+                const selectedAnimal = document.querySelector('input[name="animal"]:checked');
+                if (selectedAnimal) {
+                    const animal = selectedAnimal.value;
+                    animalImage.src = `/static/${animal}.jpg`; // Assuming images are stored in static folder
+                    animalImage.style.display = 'block';
+                } else {
+                    animalImage.style.display = 'none';
+                }
+            });
+        });
+
+        // Display file information on file selection
+        fileInput.addEventListener('change', () => {
+            const file = fileInput.files[0];
+            if (file) {
+                const fileName = file.name;
+                const fileType = file.type;
+                const fileSize = file.size; // Get the file size in bytes
+
+                fileInfo.innerHTML = `
+                    <strong>File Name:</strong> ${fileName}<br>
+                    <strong>File Size:</strong> ${fileSize} bytes<br>
+                    <strong>Type:</strong> ${fileType}
+                `;
+            } else {
+                fileInfo.innerHTML = '';
+            }
+        });
+    </script>
+</body>
+</html>

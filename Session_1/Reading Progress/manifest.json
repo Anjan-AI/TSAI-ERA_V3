@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Reading Progress",
+  "version": "1.0",
+  "description": "Shows the reading progress of a web page based on scrolling",
+  "permissions": ["activeTab", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "action": {},
+  "background": {
+    "service_worker": "background.js"
+  }
+}
