@@ -1,0 +1,90 @@
+/* app/templates/styles.css */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the top */
+    height: 100vh;
+    margin: 0;
+    background-color: #e6f7ff; /* Light blue background color */
+    font-family: Arial, sans-serif;
+    font-size: 18px; /* Increased font size */
+}
+h1 {
+    color: #2c3e50; /* Darker text color */
+    font-size: 28px; /* Increased font size for headings */
+    margin: 20px 0; /* Add margin for spacing */
+}
+.container {
+    width: 100%; /* Use full width of the page */
+    background-color: #ffffff; /* White background for the container */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px; /* Increased padding */
+    display: flex;
+    justify-content: space-between; /* Space out the form groups */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    margin: 0; /* Remove margin to fill the width */
+}
+.form-group {
+    margin: 20px; /* Add margin for spacing between groups */
+    width: 32%; /* Set width to occupy space horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    padding: 15px; /* Added padding for form groups */
+    border: 1px solid #ccc; /* Added border for visual separation */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light gray background for form groups */
+}
+button {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px; /* Increased padding */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Make button full width */
+    font-size: 18px; /* Increased font size for buttons */
+    margin-bottom: 10px; /* Add space between buttons */
+}
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+textarea {
+    width: 100%; /* Ensure textarea takes full width */
+    height: 300px; /* Set a fixed height (doubled from 150px) */
+    resize: none; /* Disable resizing */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 18px; /* Increased font size for textarea */
+    text-align: left; /* Left align text in the textarea */
+}
+.result {
+    width: 100%; /* Ensure result box takes full width */
+    height: 300px; /* Set a fixed height (doubled from 150px) */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 18px; /* Increased font size for result display */
+    margin-top: 10px;
+    background-color: #f0f0f0; /* Light gray background for results */
+    text-align: left; /* Left align text in the result box */
+}
+.checkbox-group {
+    display: flex;
+    flex-direction: column; /* Stack checkboxes vertically */
+    align-items: flex-start; /* Align checkboxes to the left */
+    width: 100%; /* Full width for checkbox group */
+    margin-bottom: 10px; /* Add space below checkbox group */
+}
+input[type="file"] {
+    margin-bottom: 10px; /* Add space between file input and upload button */
+}
