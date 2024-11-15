@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion MNIST Training</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Fashion MNIST CNN Training</h1>
+        
+        <div class="controls">
+            <button id="startTraining">Start Training</button>
+            <button id="showPredictions" disabled>Show Predictions</button>
+        </div>
+
+        <div class="plots">
+            <div id="lossPlot"></div>
+            <div id="accuracyPlot"></div>
+        </div>
+
+        <div id="predictions" class="predictions-container">
+            <h2>Model Predictions</h2>
+            <div id="predictionResults" class="prediction-results"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/plot.js') }}"></script>
+</body>
+</html> 
